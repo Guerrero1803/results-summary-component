@@ -1,0 +1,251 @@
+/* Variables */
+:root {
+    /* Primary */
+    --light-red: hsla(0, 100%, 67%, 0.1);
+    --orangey-yellow: hsla(39, 100%, 56%, 0.1);
+    --green-teal: hsla(166, 100%, 37%, 0.1);
+    --cobalt-blue: hsla(234, 85%, 45%, 0.1);
+    /* Background */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    /* Circle Background */
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    /* General */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavander: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* Fonts */
+@font-face {
+    font-family: Hanken;
+    src: url("/results-summary-component-main/assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+
+}
+
+
+/* Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: Hanken;
+
+}
+
+.container {
+    width: 38%;
+    height: 40rem;
+    margin: 0 auto;
+    margin-top: 10%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 20px 20px hsla(241, 100%, 89%, 0.3);
+
+}
+
+.container__results {
+    flex-basis: 50%;
+    border-radius: 2rem;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue))
+}
+
+.results__title {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: hsla(221, 100%, 96%, 0.80);
+}
+
+.results__box {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    border-radius: 15rem;
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue))
+}
+
+.box__result {
+    color: var(--white);
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 5rem;
+}
+
+.box__text {
+    color: hsla(221, 100%, 96%, 0.80);
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+.results__result {
+    color: var(--white);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.results__text {
+    color: hsla(221, 100%, 96%, 0.80);
+    text-align: center;
+    padding: 0 4rem;
+    font-size: 1.5rem;
+}
+
+.container__summary {
+    flex-basis: 50%;
+}
+
+.summary__title {
+    color: var(--dark-gray-blue);
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.summary__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.list__result {
+    display: flex;
+    border-radius: 5px;
+    margin: 0 3rem;
+    margin-bottom: 1.5rem;
+    height: 4rem;
+    justify-content: space-between;
+}
+
+.list__result--reaction {
+    background-color: var(--light-red);
+}
+
+.list__result--memory {
+    background-color: var(--orangey-yellow);
+}
+
+.list__result--verbal {
+    background-color: var(--green-teal);
+}
+
+.list__result--visual {
+    background-color: var(--cobalt-blue);
+}
+
+.list__box {
+    display: flex;
+    padding-left: 1rem;
+}
+
+.list__image {
+    display: block;
+}
+
+.list__text {
+    line-height: 4rem;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+}
+
+.list__text--reaction {
+    color: hsl(0, 100%, 67%);
+}
+
+.list__text--memory {
+    color: hsl(39, 100%, 56%);
+}
+
+.list__text--verbal {
+    color: hsl(166, 100%, 37%);
+}
+
+.list__text--visual {
+    color: hsl(234, 85%, 45%);
+}
+
+.list__results {
+    line-height: 4rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #9d99a0;
+    font-weight: bold;
+}
+
+.list__achieved {
+    color: var(--dark-gray-blue);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.summary__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 80%;
+    text-align: center;
+    border-radius: 3rem;
+    background-color: var(--dark-gray-blue);
+    height: 4.5rem;
+    color: var(--white);
+    line-height: 4.5rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1150px) {
+    .container {
+        width: 50%;
+
+    }
+}
+
+@media (max-width: 892px) {
+    .container {
+        width: 70%;
+
+    }
+}
+
+@media (max-width: 630px) {
+    .container {
+        width: 90%;
+
+    }
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+        height: 100%;
+        box-shadow: none;
+    }
+
+    .container__results {
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .container__summary {
+        padding-bottom: rem;
+    }
+
+    .results__text {
+        padding-bottom: 5rem;
+    }
+
+}
